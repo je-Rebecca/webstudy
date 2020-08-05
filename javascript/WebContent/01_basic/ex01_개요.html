@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+/* 출력방법  */
+ // 경고창 alert 
+ window.alert('hello javascript');
+ alert("hello ECMAscirpt");
+
+ //콘솔창 console 
+ console.log('hello javascript');
+ //콘솔창 확인방법 : 크롬-개발자도구(F12) 콘솔 누르면됨 
+ 
+ //브라우저화면에 띄우기 
+ document.write('hello');
+ document.write('javascript');
+ document.write('<h1>hello ECMAscript</h1>')
+ 
+ /*주요 선택 메소드 (DOM)
+ 	document.getElementById('아이디')
+ 	document.getElementByTagName('태그')
+ 	document.querySelector(선택자) : 아이디선택자(#아이디) 등
+ 	document.querySelectorAll(선택자) 클레스선택자(.클래스 등 )
+ */
+ 
+ /* 주요속성 
+ 1)선택.innerHTML = new content(내부 테그스 수정 및 변경 )
+ 2)선택. style .property= new style(새로운 스타일 css)
+ 3)선택.setAttribute(attribute,new value) (새로운 속성과 값을 지정)*/
+ 
+ /* 자바스크립트 순서대로 해석 처리함   */
+ document.getElementById('answer').innerHTML ='어린이날 ';
+
+</script>
+</head>
+<body>
+	<h3> 5월 5일일은? </h3> 
+	정답은 <span id ="answer">입니다
+	
+	<script type="text/javascript">
+	
+	// 실행이 되는 코드이다.
+	document.getElementById('answer').innerHTML = '어린이 날';
+	
+	// 스타일
+	document.getElementById('answer').style.color = 'red';  //  #answer { color: red; }
+	
+	// 속성
+	document.getElementById('answer').setAttribute('class', 'answer-class');  // <span class="answer-class" id="answer"></span>
+	
+
+	 </script>
+	</body> 
+</html>

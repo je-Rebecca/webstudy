@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM Quiz</title>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+	onload = () => {
+		
+		var title =  document.createElement('h1');
+		
+		document.body.appendChild(title); 
+		
+		var text = document.createTextNode('Dom 생성연습');
+		
+		title.appendChild(text); 
+		
+		var ul = document.createElement('ul');
+		
+		document.body.appendChild(ul);
+		
+		var fruit = ['apple','banana','oragne','pineapple','watermelone']; 
+		
+		for(i =0, len = fruit.length ; i<len;  i++){
+			
+			var li = document.createElement('li'); 
+			
+				ul.appendChild(li);
+				
+			var fruitName =	document.createTextNode(fruit[i]);
+			
+			li.appendChild(fruitName);
+		}
+	}
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

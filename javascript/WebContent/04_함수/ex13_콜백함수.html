@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>13콜백함수</title>
+<script type="text/javascript">
+//선언적 함수, 콜백함수 
+
+function callBack(){
+	console.log('callBack() 함수 호출');
+}
+
+function myFunc(func){
+	func(); 
+	
+}
+
+myFunc(callBack); 
+
+//익명함수, 콜백함수(중요!) 
+
+function yourFunc(func){
+	func(); 
+}
+yourFunc (function (){console.log('익명callback함수1 호출')
+	});
+
+yourFunc(() => {console.log('익명callback함수2 호출')
+	});
+
+
+function sayHello(func, times){
+	for(var i=0; i<times; i++){
+		func();
+	}
+}
+
+sayHello(function(){console.log('hello')}, 5);
+
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

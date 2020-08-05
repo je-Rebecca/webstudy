@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>정규표현식 그룹핑</title>
+<script type="text/javascript">
+	/*var str = 'hello hey hehehe hee'; 
+	
+	 var regExp =/he+/g; 
+	 var array = str.match(regExp);
+	 console.log(array.toString());
+	 
+	 var regExp =/(he)+/g; 
+	 var array = str.match(regExp);
+	 console.log(array.toString());
+	 
+		 
+
+	 var str1 ='tomato';
+	 var regExp =/(to)(ma)(to)/g;
+	console.log(regExp.exec(str1));
+	 
+	
+	 var regExp =/(to)(?:ma)(to)/g;
+	 console.log(regExp.exec(str1));
+	 
+	 
+	 var regExp =/to(?=ma)/g;
+	 console.log(regExp.exec(str1));
+	 
+	
+	 var regExp =/(to)(?!ma)/g;
+	 console.log(regExp.exec(str1));*/
+	 
+	
+	 var ts ="near an ear, a nearer ear, a nearly eerie ear";
+	 var regExp = /(n)(ea)/g;
+	 var array = ts.match(regExp);
+	 console.log(array.toString());
+	 
+	 var regExp = /(n)(?:ea)(r)/g; 
+	 var array = ts.match(regExp);
+	 console.log(array.toString());
+	 
+	 var regExp = /n(?=ea)/g; 
+	 var array = ts.match(regExp);
+	 console.log(array.toString());
+	 
+	 var regExp = /n(?!ea)/g; 
+	 var array = ts.match(regExp);
+	 console.log(array.toString());
+</script>
+</head>
+<body>
+
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+var box; 
+var image; 
+
+
+function imageLoad(){
+	 box = document.getElementById('image-box'); 
+	 img = document.createElement('img'); //생성
+		box.appendChild(img);
+	
+}
+
+function imageChange(){
+	img.setAttribute('src','../assets/images/fruit'+
+			(parseInt(Math.random()*3)+1)+'.jpg'); 
+}
+</script>
+</head>
+<body onload= "imageLoad()">
+	<form action="#">
+		<input type ="button" value ="그림변경" onclick ="imageChange()"/> 
+	</form><br><br> 
+
+<!--  랜덤 하게 이미지 표시하기   -->
+	<div id ="image-box">
+	
+	</div>
+</body>
+</html>

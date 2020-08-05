@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM</title>
+<script type="text/javascript">
+	onload = () =>{
+		var title = document.createElement('h1');
+		title.textContent = '영화목록';
+		document.body.appendChild(title);
+		
+		var ul = document.createElement('ul'); 
+		document.body.appendChild(ul); 
+		
+		var movies = ['HarryPorter', 'Polar Express', 'About Time'];
+		for(i= 0, len = movies.length; i<len; i++){
+			var li = document.createElement('li');
+			li.textContent = movies[i];
+			ul.appendChild(li);
+		}
+		
+	}
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

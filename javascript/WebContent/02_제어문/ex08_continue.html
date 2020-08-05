@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	var output ='';
+	var total = 0; 
+	for(a=1; a<100; a++){
+		if(a % 3 ==0){
+			continue; 
+		}
+		output += a +'&nbsp;'; 
+		total += a;
+		
+	}
+	document.write(output +'<br>합계 : ' +total);
+	
+	// 5개의 양수를 입력 받아 평균 출력 양수아니면, 다시 입력하세요, 재입력 
+	
+	var sum =0;
+	var count =0; 
+
+	while(count < 5) {
+		var a= Number(prompt((count+1) + '번째 양수를 입력하세요','0'));	
+	
+		if(a <= 0 || isNaN(a)) {
+			alert('양수가 아닙니다. 다시 입력하세요.');
+			continue;  //while로 흐름 넘어감 
+	}
+	sum+=a; 
+	count++;
+	}
+	alert('평균은' +sum/count +'이다');
+	//document.write('<h2>입력받은 양수의 평균은 ' + sum/count +'이다 </h2>')
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

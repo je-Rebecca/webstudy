@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex09 매개변수 </title>
+<script type="text/javascript">
+	function func1(name,age){
+		document.write('이름은 '+ name + '이고, 나이는' +age +'살 <br>');
+	}
+	func1('Alice ', 20); 
+	
+	//배열 매개변수 
+	function func2(list){
+		document.write('이름은 '+ list[0] + '이고, 나이는' +list[1] +'살 <br>');
+	}
+	var array1 =['James',25];
+	func2(array1);
+	
+	//전개연산자(...) 활용-1 
+	function func3(name,age){ 
+		document.write('이름은 '+ name + '이고, 나이는' +age +'살 <br>');
+	}
+	var array2 =['Ben', 30];
+	func3(...array2);
+	
+	//활용-2  매개변수를 전개 연산자로 사용 
+	function func4(...list){
+		for(var a = 0, len = list.length; a < len; a++){
+			document.write('list: [ ' +a+ ']' + list[a] +'<br>');
+		}		
+	}
+	func4(10);  //파라미터 개수 다를 때, 
+	func4(20,30);
+	func4(40,50,60);
+	
+	//파라미터와 매개변수의 개수가 다른경우 
+	
+	function func5(a,b){
+		document.write('<hr/>  a: ' + a + ' b: '+ b + '<br>');
+	}
+	func5('banana'); 
+	func5('pomelo','apricot'); 
+	func5('pear','blueberry','kumquat')
+	
+	//default 매개변수 : 매개변수 전달되지 않을 때 사용 
+	function func6(a,b,c){
+		//전달이 없는 경우 대비한 디폴트 처리
+		if(!a) {a =1;}  //조건식 || 거짓일때;
+		if(!b) {b =2;}  //b가 있다 아니면 b=2 다 
+		if(!c) {c =3;}  //c가 있다 아니면 c=3;
+		document.write('<hr/> a: ' + a + ' b: '+ b + 'c: '+ c + '<br>');
+	}
+		func6();
+		func6(100);
+		func6(100,200);
+		func6(100,200,300);
+		
+	//arguemnts 객체  
+	function func7(){
+		document.write('arguments 객체 타입 : '+ typeof(arguments) +'<br>'); 
+		document.write('arguments 객체 길이 : '+ arguments.length +'<br>');
+		for(var i =0, len = arguments.length; i<len; i++){
+			document.write('arguments[' + i +'] : ' +arguments[i] +'<br>' ); 
+			
+		}
+	}
+	func7();
+	func7(1,2);
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

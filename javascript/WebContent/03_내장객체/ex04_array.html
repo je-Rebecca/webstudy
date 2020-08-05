@@ -1,0 +1,49 @@
+-<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>array</title>
+<script type="text/javascript">
+/*
+var array =[1,2,3,4,1,2,3,4];
+console.log(array.indexOf(1));
+
+console.log(array.lastIndexOf(1));
+
+// forEach(function(배열요소, [인덱스.배열자체 ] ) {  } ); 
+
+var array=[1,2,3,4,5]; 
+array.forEach(function(e){console.log(e);
+});
+
+
+//filter :조건 처리하는 메소드 
+var array = [1,2,3,4,5,6,7,8,9,10];
+array= array.filter(function(e){
+	return e % 2 ==1;
+});
+console.log(array.toString()); 
+
+
+//화살표함수 
+var array = [1,2,3,4,5,6,7,8,9,10];
+array = array.filter((e)=>{ return e%2 == 0;}); 
+array = array.filter((e)=> e%2 == 0); 
+console.log(array.toString()); */
+
+
+//배열에서 ,, 지우기 
+var array = [1,,,,2,,'','hello',3,4,5];
+array = array.filter((e)=> e!=null);
+console.log(array.toString());
+
+//배열에서 숫자만 남기시오 
+var array = [1,,,,2,,'','hello',3,4,5];
+array = array.filter((e)=> !isNaN(e) && e !='');
+console.log(array.toString());
+</script>
+</head>
+<body>
+
+</body>
+</html>

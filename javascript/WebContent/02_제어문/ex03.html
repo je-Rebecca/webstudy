@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript">
+/*현재시간 기준으로 다음 출력하기 
+	11시까지 아침먹기 
+	15시까지 점심먹기
+	20시까지 저녁먹기 
+	나머지 야식먹기 
+	
+*/
+var now = new Date().getHours();
+
+if(now <= 11) { alert ('아침먹기');}
+else if( now <= 15) {alert ('점심먹기');}
+else if( now <= 20) {alert ('저녁먹기');}
+else{alert ('야식먹기');}
+
+/* 현재 날짜 기준으로 요일 출력  */
+
+var todayDate = new Date().getDay(); 
+if(todayDate == 0) { alert ('일요일');}
+else if(todayDate == 1) { alert ('월요일');}
+else if(todayDate == 2) { alert ('화요일');}
+else if(todayDate == 3) { alert ('수요일');}
+else if(todayDate == 4) { alert ('목요일');}
+else if(todayDate == 5) { alert ('금요일');}
+else { alert ('토요일');}
+
+</script>
+<title>ex03 if 제어문</title>
+</head>
+<body>
+
+</body>
+</html>

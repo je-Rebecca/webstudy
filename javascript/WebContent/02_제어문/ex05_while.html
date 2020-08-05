@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>while</title>
+<script type="text/javascript">
+	/* var a = 0;
+	var output = '<table>'; 
+	while(a < 5){
+		output += '<tr>';
+		output += '<td>' + a++ + '</td>';		
+		output += '<tr>';	
+	}
+	output += '</table>'; 
+	
+	document.write(output); 
+	
+	
+	var num = parseInt(Math.random()*20) +1;
+	var cnum;  
+	var n = 0; 
+	var answer = false; 
+	
+	while( !answer ){
+		cnum = Number(prompt('1~20 사이 난수 입력'));
+		n++; 
+		if(cnum <1 || cnum >20){
+			alert('1~20사이로 입력하세요'); 
+		}else {
+			if(num == cnum){
+				answer = true;
+				alert(n +'번 만에 정답');
+			}else {
+				alert('오답');
+			}
+		}
+	}	*/
+
+	//1초 동안 hello 를 화면에 계속 출력하기 
+	
+	var currentMilliSecond = new Date().getTime(); 
+	var line = 0; 
+	while( new Date().getTime() <= currentMilliSecond +1000 ){
+		document.write((line++) + ' : hello <br>');
+	}
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

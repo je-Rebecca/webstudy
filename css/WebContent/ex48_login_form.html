@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+body{background-color: gray; box-sizing: border-box;}
+fieldset{background-color: lightgray; width: 350px; margin:20px auto;
+  border-radius: 5px; border: 1px: solid lightgray; background-color: lightgray;}
+fieldset .screen-out{ width: 0px; height: 0px; overflow: hidden; position:absolute;}
+fieldset #login-id, fieldset #login-pw{width:100%; padding:20px; box-sizing: border-box;}
+
+fieldset > button {width:100%; padding: 20px; background-color: gray;
+ border: 1px solid gray; border-radius: 5px; margin-top: 50px; font-size: 1.2em }
+fieldset > button:hover {color: white; background-color:black; font-weight: bold; }
+
+fieldset > .login-append{margin-top:20px; overflow:hidden;}
+fieldset > .login-append >.login-check {float: left;}
+fieldset > .login-append >.login-find {float:right;}
+
+fieldset > .login-append >.login-find > .login-find-link{text-decoration: none; color: black; }
+fieldset > .login-append >.login-find > .login-find-link:hover {color: red; }
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="#" method="post">
+		<fieldset>
+			<legend class="screen-out">로그인 정보 입력폼</legend>
+			<label for ="login-id" class="screen-out">로그인</label>
+			<input id="login-id" type="email" name="email" placeholder="example@gmail.com"/>
+			<label for ="login-pw" class="screen-out">비밀번호</label>
+			<input id="login-pw" type="password" name="pw" placeholder="password"/>
+			<button>로그인</button>
+		<div class="login-append">	
+			<div class="login-check">
+				<input id="keep-login" type="checkbox" name="keep-login"/>
+				<label for="keep-login">로그인유지</label>
+			</div>
+			<div class="login-find">
+				<a href="#" class="login-find-link">아이디 찾기</a>
+				&nbsp;/&nbsp; 
+				<a href="#" class="login-find-link">비밀번호 찾기 </a>
+			</div>
+		</div>	
+		</fieldset>
+	</form>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

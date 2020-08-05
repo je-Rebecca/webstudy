@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>String </title>
+<script type="text/javascript">
+/*
+	document.write('<h3>');
+	var str ='sqlsession'
+	document.write('"sqlession".length = '+str.length+'<br><br>');
+	
+	document.write('"sqlession".charAt(0) = '+str.charAt(0)+'<br><br>');
+	
+	document.write('"sqlession".indexOf("s") = '+str.indexOf('s')+'<br>');
+	document.write('"sqlession".indexOf("S") = '+str.indexOf('S')+'<br><br>');
+	
+	document.write('"sqlession".lastIndexOf("s") = '+str.lastIndexOf('s')+'<br><br>');
+	
+	
+	document.write('"sqlession".toLowerCase() = '+str.toLowerCase()+'<br>');
+	document.write('"sqlession".toUpperCase() = '+str.toUpperCase()+'<br><br>');
+
+	document.write('"sqlession".replace("sql","SQL") = '+str.replace("sql","SQL")+'<br>');
+	document.write('"sqlession".replace("s","") = '+str.replace('s','')+'<br><br>');
+	//document.write('"sqlession".replaceAll("s","") = '+str.replaceAll('s','')+'<br><br>');
+	
+	document.write('"sqlession".substring(3) = ' +str.substring(3)+'<br>');
+	document.write('"sqlession".substring(0,3) = ' +str.substring(0,3)+'<br><br>');
+	
+	document.write('"sqlession".substr(3) = ' +str.substr(3)+'<br>');
+	document.write('"sqlession".substr(0,3) = ' +str.substr(0,3)+'<br><br>');
+	document.write('"sqlession".substr(3,7) = ' +str.substr(3,7)+'<br><br>');
+	
+	
+	var str ='  hello  ' ;
+	document.write(str.length +'<br>');
+	document.write(str.trim() +'<br>');
+	document.write(str.trim().length +'<br>');
+	document.write(str.trimLeft() +'<br>'); //앞(좌)공백제거
+	document.write(str.trimLeft().length +'<br>');
+	document.write(str.trimStart() +'<br>');
+	document.write(str.trimRight() +'<br>');//뒤(우)공백제거
+	document.write(str.trimEnd() +'<br><br>');//뒤(우)공백제거
+	
+	var list =['hello','java','student']; 
+	var str =list.join(' '); 
+	document.write(str+'<br><br>')
+	
+	
+	var str = 'hello java student';
+	var list = str.split(' ');
+	document.write(list +'<br><br>');*/
+	
+	var str ='sqlsession'
+	String.prototype.replaceAll = function(before,after){
+		return this.split(before).join(after);
+	}
+	document.write('"sqlession".replaceAll("s","") = '+str.replaceAll('s','')+'<br><br>');
+	
+	
+	/*a= function(){
+		alert('a호출');
+	}
+	a();
+	document.write('</h3>')
+	*/
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

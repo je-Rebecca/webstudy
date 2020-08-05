@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>XMLHttpRequest</title>
+
+</head>
+<body>
+<script type="text/javascript">
+
+//XLMHttpRequest 객체 생성 
+	var xhr = new XMLHttpRequest(); 
+	
+//open 메소드 open(전송방식, 데이터, 비동기유무)  
+	xhr.open('GET','DATA.html', false); 
+
+//send 메소드 
+	xhr.send();
+
+//reponseText 프로퍼티 (통신 결과)
+	document.body.innerHTML += xhr.responseText 
+
+</script>
+</body>
+</html>

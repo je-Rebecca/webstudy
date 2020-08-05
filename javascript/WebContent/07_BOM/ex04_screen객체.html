@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>screen 객체</title>
+<script type="text/javascript">
+
+document.write('<h3>');
+	
+document.write('화면너비 :' +screen.width+'<br>');
+document.write('화면높이 :' +screen.height+'<br>');
+	
+document.write('사용가능한 화면너비 :' +screen.availWidth+'<br>');
+document.write('사용가능한 화면높이 :' +screen.availHeight+'<br>');
+	
+	
+document.write('</h3>');
+
+//최대화 된 창 열기 
+open('','','width=' +screen.availWidth + ',height='+screen.availHeight);
+</script>
+</head>
+<body>
+
+</body>
+</html>

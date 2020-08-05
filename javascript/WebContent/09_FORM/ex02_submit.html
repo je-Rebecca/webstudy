@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta>
+    <title>02submit추천사이트선택</title>
+    <script>
+      function goSite(){
+        var url = document.forms.myform.site;
+            if(url.value ==''){
+              alert("please choose the website ");
+              return false;       }
+        //새창에 열기
+        open(url.value,'','');
+        //주소이동 
+       // location.assign(url.value); 
+        //location.href=url.value; 
+          return true; 
+      }
+    </script>  
+    <style>
+
+    </style>
+  </head>
+  
+  <body>
+    <form name ="myform" action ="#" onsubmit="return goSite()">
+        <select name ="site">
+          <option value ="">Which website want to open</option>
+          <option value ="https://www.google.com">google</option>
+          <option value ="https://www.naver.com">naver</option>
+          <option value ="https://www.daum.net">daum</option>
+        <input type ="submit" value="go"/>
+      </select>
+    </form>
+  </body>
+</html>

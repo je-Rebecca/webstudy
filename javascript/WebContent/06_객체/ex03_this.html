@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>this</title>
+<script type="text/javascript">
+	var car ={
+	model :'e-class',
+	drive:function(){
+	document.write('<h3>'+ this +'</h3>');
+	document.write('<h3>'+ car +'</h3>');
+	document.write('<h3>'+ (this === car) +'</h3>');
+			
+	document.write('<h3>'+ this.model+'타고 드라이브 한다</h3>');
+	document.write('<h3>'+ car.model+'타고 드라이브 한다</h3>');			
+			}
+	};
+	car.drive();
+</script>
+</head>
+<body>
+
+</body>
+</html>

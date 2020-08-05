@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSON: JavaScript Object Notation</title>
+<script type="text/javascript">
+
+var man={
+		name:'Emma',
+		"age":20,
+		"birth":"2001-01-01"
+		};
+	document.write('<h3>'+man+'</h3>');	
+	document.write('<h3>'+JSON.stringify(man)+'</h3>');	
+
+	var copy = JSON.parse(JSON.stringify(man));
+	document.write('<h3>'+copy+'</h3>');	
+	document.write('<h3>'+copy.name+'</h3>');	
+	document.write('<h3>'+copy.age+'</h3>');	
+	document.write('<h3>'+copy.birth+'</h3>');	
+	
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

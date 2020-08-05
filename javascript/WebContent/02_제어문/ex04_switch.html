@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+var num = Number(prompt('typing integer')); 
+switch (num %2) {
+case 0: alert(num +' is even' ); 
+	break; 
+case 1: alert(num +' is odd');
+	break;
+}
+
+var hour = new Date().getHours(); 
+switch(true){
+case hour <= 11: alert('아침먹자'); break; 
+case hour <= 15: alert('점심먹자'); break; 
+case hour <= 20: alert('저녁먹자'); break; 
+default : alert('야식먹자'); 
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>

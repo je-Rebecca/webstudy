@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex06_선언적_익명함수</title>
+<script type="text/javascript">
+
+	
+	view3();
+	 
+
+	var view1 = function () {
+		console.log('view1() 호출');
+	}
+	
+	var view2 = () => {
+		console.log('view2() 호출');
+	}
+	view1();
+	view2(); 
+	function view3() {
+		console.log('view3() 호출'); 
+	}
+	
+	var view4 = function f() {
+		console.log('view4() 호출'); 
+	}
+	view4();
+	/*
+	view();
+	function view() {  //선언적함수
+		console.log('A');
+	}
+	
+	//익명함수 
+	var view =  function () {
+		console.log('B');		
+	}
+	
+	view();
+	*/
+</script>
+</head>
+<body>
+
+</body>
+</html>

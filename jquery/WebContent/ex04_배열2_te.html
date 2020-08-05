@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>배열 합</title>
+<script src = "asset/lib/jquery-3.5.1.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function(){
+		var pics =['asset/images/fruit1','asset/images/fruit2','asset/images/fruit3'];
+		var message1 = '';
+		$.each(pics, function(index,item){
+			message1 += '<img src = "' + item + '.jpg">';
+		});
+	$('.img-box').html(message1);
+	});
+	
+	$(function(){
+		var pics =['fruit1.jpg','fruit2.jpg','fruit3.jpg' ];
+		var message1 = '';
+		$.each(pics, function(index,item){
+			message1 += '<img src = "asset/images/' + item + '">';
+		});
+		//$('.img-box').html(message1);
+		$('.img-box').append(message1);
+	});
+	
+	$(function(){
+		var site =[
+			{site:'네이버', url: 'https://www.naver.com' },
+			{site:'구글', url: 'https://www.google.com'},
+			{site:'다음', url: 'https://www.daum.net' }
+		];
+		var message2 = '<ul>';
+		$.each(site,function(index,item){
+			message2 += '<li><a href ="' + item.url + '">'+ item.site +'</a></li>';
+		});
+		message2 += '</ul>';
+		$('.link-box').html(message2);
+	});
+
+</script>
+
+</head>
+<body>
+	<div class ="img-box">
+	</div>
+	<div class ="link-box">
+	</div>
+</body>
+</html>

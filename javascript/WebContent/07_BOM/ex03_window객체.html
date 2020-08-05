@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>윈도우객체</title>
+<script type="text/javascript">
+	var popUp;
+	
+	function myOpen(){
+		popUp = open('ex03_index.html','','width=400, height=300, top=300');
+	}
+	function moveLeft(){
+		popUp.focus();
+		popUp.moveBy(-20,0); 
+	}
+	function moveRight(){
+		popUp.focus();
+		popUp.moveBy(20,0);
+	}
+	function moveUp(){
+		popUp.focus();
+		popUp.moveBy(0,-20);}
+	
+	function moveDown(){
+		popUp.focus();
+		popUp.moveBy(0,20);}
+	
+	function moveCenter(){
+		popUp.focus();
+		alert('스크린 너비 : ' + screen.availWidth); //1920
+		alert('스크린 높이 : '+ screen.availHeight); //1080
+		x=(screen.availWidth - 400)/2;
+		y=(screen.availHeight - 300)/2;
+		popUp.moveTo(x,y);
+	}
+	
+	function sizeUp(){
+		var unit =20;
+		popUp.focus();
+		popUp.resizeBy(unit, unit)
+		popUp.moveBy(-unit/2, -unit/2);
+	}
+	
+	function sizeDown(){
+		var unit =20;
+		popUp.focus();
+		popUp.resizeBy(-unit, -unit);
+		popUp.moveBy(+unit/2, +unit/2);
+	}
+	function init(){
+		popUp.moveTo(0,300); 
+		popUp.resizeTo(400,300); 
+		popUp.focus();
+	}
+</script>
+</head>
+<body>
+	<h3>창의 이동 및 크기 조정</h3>
+	<form action="#">
+		<input type = "button" value ="창 열기" onclick ="myOpen()"/>
+		
+		<input type = "button" value ="우로이동" onclick ="moveLeft()"/>
+		<input type = "button" value ="좌로이동" onclick ="moveRight()"/>
+		<input type = "button" value ="위로이동" onclick ="moveUp()"/>
+		<input type = "button" value ="아래로이동" onclick ="moveDown()"/>
+		<input type = "button" value ="중앙으로이동" onclick ="moveCenter()"/>
+		
+		<input type = "button" value ="크기 증가" onclick ="sizeUp()"/>
+		<input type = "button" value ="크기감소" onclick ="sizeDown()"/>
+		<input type = "button" value ="원상복귀" onclick ="init()"/>
+		
+	</form>
+</body>
+</html>

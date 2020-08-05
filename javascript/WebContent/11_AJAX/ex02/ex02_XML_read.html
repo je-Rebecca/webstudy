@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>XML_Read</title>
+<script type="text/javascript">
+
+onload=() =>{
+	var xhr = new XMLHttpRequest(); 
+	xhr.open('GET','DATA.xml',true);
+	xhr.send();
+	xhr.onreadystatechange =()=>{
+		if(xhr.readyState == 4){
+			if(xhr.status == 200){
+				var XMLData = xhr.responseXML;
+				//alert(XMLData.childNodes[0].nodeName); people 
+				//alert(XMLData.childNodes[0].childNodes[1].nodeName); person
+				//alert(XMLData.childNodes[0].childNodes[1].childNodes[1].nodeName);name
+				//alert(XMLData.childNodes[0].childNodes[1].childNodes[1].nodeValue); // null 
+				//alert(XMLData.childNodes[0].childNodes[1].childNodes[1].childNodes[0].nodeName); //text(textNode)
+				//alert(XMLData.childNodes[0].childNodes[1].childNodes[1].childNodes[0].nodeValue);  //Alice
+				
+				var name = XMLData.childNodes[0].childNodes[1].childNodes[1].childNodes[0].nodeValue; 
+				var age = XMLData.childNodes[0].childNodes[1].childNodes[3].childNodes[0].nodeValue; 
+				var adress = XMLData.childNodes[0].childNodes[1].childNodes[5].childNodes[0].nodeValue; 
+				var phone = XMLData.childNodes[0].childNodes[1].childNodes[7].childNodes[0].nodeValue; 
+				
+				document.body.innerHTML =(name +', '+  age+', '+ adress+', ' +phone);
+
+				
+				
+			}
+		}
+		
+	}
+}
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>02함수, 배열, 객체 생성</title>
+<script type="text/javascript">
+var car ={
+		model:'sonata',
+		price:7500, 
+		year:'2020-01-01',
+		company:{
+			name:'benz',
+			country:'Germany' 
+		},
+		tires:['frontL', 'frontR','BackL','BackR'],
+		drive:function(){document.write("Let's go!")}
+};
+
+document.write('<h3>');
+document.write('모델명 : ' + car.model +'<br>');
+document.write('가격 : ' + car.price +'<br>');
+document.write('연식 : '+ car.year +'<br>');
+document.write('회사명:' + car.company.name +'<br>');
+document.write('나라:' + car.company['country'] +'<br>');
+
+for(var i =0, len = car.tires.length; i<len; i++){
+	document.write('타이어 : [' +i+']' + car.tires[i]+'<br>'); 
+}
+document.write('</h3>');
+
+car.drive();
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

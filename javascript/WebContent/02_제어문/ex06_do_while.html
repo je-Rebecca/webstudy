@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+/* 적을 쓰러뜨러라 : 적은 에너지 100을 가지고 있다 
+한번 공격마다 0~19 사이를 닳음 모든 공격은 자동으로 진행됨 
+몇번 만에 적을 쓰러뜨렸는지 출력 
+ */
+document.write('<h1>적을 쓰러뜨려라.</h1>');
+	
+	var hp = 100;  // 적의 에너지
+	var attack = 0;  // 공격력
+	var count = 0;  // 공격 횟수
+	var graph = '';  // 남은 에너지를 그래프로 표현
+	i = 0;
+	do {
+		graph += '■';  //hp 1 당 ㅁ 만듬 
+		i++;
+	} while (i < hp);
+	document.write('적의 에너지 : ' + graph + '(' + hp + ') <br>');
+	//공격 
+	do{
+		attach = parseInt(Math.random () *19 ); 
+		hp -= attach; 
+		count++; 
+		hp = hp <0 ? 0 : hp;  
+		//hp <0 && ( hp = 0); ./ 연산자 우선순위  
+		i = 0;
+		graph =''; 
+		do {
+			graph += '■';  //hp 1 당 ㅁ 만듬 
+			i++;
+		} while (i < hp);
+		document.write('적의 에너지 : ' + graph + '(' + hp + ') <br>');
+	}while(hp > 0);
+	document.write('<h3>' +count +'번 만에 쓰러뜨렸다 </h3>');
+		
+	
+ 
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

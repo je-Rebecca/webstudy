@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>04_배열목록 _과일 목록</title>
+<script type="text/javascript">
+//과일이름 5개 저장한 배열생성
+//배열 모든 요소 ul로 만들기 
+
+var array =['longan', 'mango', 'papaya', 'pomelo', 'fig'];
+var output ='';
+output += '<ul type ="square">';
+for(var a = 0, len = array.length; a < len;  a++){
+	output +='<li>' + array[a] + '</li>';
+} 
+output += '</ul>';
+document.write(output);
+
+//문제2. 현재 날짜 기준으로 요일(일요일,...,토요일)을 출력하시오.
+
+var array = ['일','월','화','수','목','금','토']; 
+
+console.log('오늘은 ' + array[new Date().getDay()] +'요일이다');
+
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

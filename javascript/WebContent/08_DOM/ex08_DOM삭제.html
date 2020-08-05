@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DOM삭제</title>
+<script type="text/javascript">
+
+function removeHobby(f){
+	
+	var ul = document.getElementsByTagName('ul'); 
+			
+	var list = document.getElementsByTagName('li');
+	for(i=0, len =list.length; i<len; i++ ){
+		if(list[i].textContent ==f.hobby.value){
+			ul[0].removeChild(list[i]);
+		}
+	}
+	
+}
+</script>
+</head>
+<body>
+	<h3> Hobby List</h3>
+	<ul>
+		<li>운동</li>
+		<li>곡예</li>
+		<li>노래</li>
+		<li>공부</li>
+		<li>서예</li>	
+	</ul><br>
+	<form action="#">
+	삭제할 취미 입력 
+		<input type ="text" name ="hobby" /> 
+		<input type="button" value ="삭제" onclick ="removeHobby(this.form)"/> 
+	</form>
+</body>
+</html>

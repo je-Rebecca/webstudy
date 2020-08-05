@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>__proto__</title>
+<script type="text/javascript">
+
+function Student(name){
+	this.name = name;
+	this.__proto__.school ='NYU'; 
+}
+
+var s1 = new Student('Tim'); 
+var s2= new Student('Edward'); 
+
+for(var property in s1){
+	document.write(property + ':' + s1[property]+'<br>')
+}
+
+for(var property in s1){
+	document.write(property + ':' + s2[property]+'<br>')
+}
+
+</script>
+</head>
+<body>
+ 
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>button을 submit처럼 이용</title>
+<script type="text/javascript">
+	function goLogin(f) {
+		
+		var uID = f.uID;
+		if(uID.value.length < 6 || uID.value.length >16){
+			alert ('아이디를 확인하세요');
+			uEmail.focus();
+			return; 
+		}
+		f.submit(); 
+		
+		//이메일은 @ 와 , 이 반드시 포함되어야함! 
+		
+		var eMail = f.uEmail
+		if(eMail.value.indexOf('@') == -1 | eMail.value.indexOf('.') == -1) {
+			alert('이메일을 확인하세요')
+			eMail.focus();
+			return;
+		}
+	}
+</script>
+</head>
+<body>
+	<form name="myForm" action ="#">
+		<input type ="text" name ="uID" placeholder="ID" /><br> 
+		<input type ="text" name ="uEmail" placeholder="EMAIL" /><br> 
+		
+		<input type ="button" value="전송" onclick="goLogin(this.form)"/>
+		
+	</form>
+</body>
+</html>

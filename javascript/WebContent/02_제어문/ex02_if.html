@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>성적확인</h1>
+	<ul>
+		<li>학생명 : <span id="name"></span></li>
+		<li>평균 : <span id="average"></span>점</li>
+		<li>학점 : <span id="grade"></span>학점</li>
+	</ul>
+	<script type="text/javascript">
+	var student = prompt('학생이름을 입력하세요');
+	var kor = Number(prompt('국어 점수 입력'));
+	var eng = Number(prompt('영어 점수 입력'));
+	var mat = Number(prompt('수학 점수 입력'));
+	
+	var avg = (kor+eng+mat) / 3; 
+	
+	var grd; 
+	
+	if(avg >= 90){ 
+		grd ='A';
+		}else if(avg >=80){
+			grd='B'; 
+		}else if(avg >=70){
+			grd='C'; 
+		}else if(avg >=60){
+			grd='D'; 
+		}else { 
+			grd='F'; 
+		}
+
+	document.getElementById('name').innerHTML = student; 
+	document.getElementById('average').innerHTML= avg;
+	document.getElementById('grade').innerHTML= grd;
+	</script>
+</body>
+</html>

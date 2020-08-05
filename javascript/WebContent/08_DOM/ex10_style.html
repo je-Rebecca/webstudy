@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>style</title>
+<script type="text/javascript">
+function viewAnswer(){
+	var answer = document.querySelector('#answer');
+	var btn = document.querySelector('#btn');
+	
+	if(btn.value =='정답 보기'){
+		show();
+	}else {
+		hide();
+	}
+	function show(){
+		btn.value ='정답 숨기기'; 
+		answer.style.visibility ='visible';
+		//answer.style.display ='inline';
+		//answer.style.color='black';
+		//answer.style.opacity='1';
+	}
+	function hide(){
+		btn.value ='정답 보기';
+		answer.style.visibility ='hidden';
+		//answer.style.display ='none';
+		//answer.style.color='white';
+		//answer.style.opacity='0';
+	}
+}
+</script>
+</head>
+<body>
+	<h3>다음 성격이 다른 DOM ? </h3>
+	<div>
+		<ol>
+			<li>document.getElementById('아이디')</li>
+			<li>document.getElementsByTagName('태그')</li>
+			<li>document.getElementByClassName('클래스')</li>
+			<li>document.querySelector('#id')</li>		
+		</ol>
+	</div>	
+	정답 보기 : [<span id="answer" style="visibility: hidden;">4</span>]&nbsp;&nbsp;&nbsp;
+	<input id ="btn" type = "button" value ="정답 보기" onclick="viewAnswer()"/>
+</body>
+</html>

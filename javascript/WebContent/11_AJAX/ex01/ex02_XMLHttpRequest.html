@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>XMLHttpRequest</title>
+<script type="text/javascript">
+	onload = () =>{
+		var xhr =new XMLHttpRequest(); 	
+		xhr.open('GET','DATA.html',false);
+		
+		var start = new Date().getTime();
+		xhr.send();
+		document.querySelector('#info').innerHTML = xhr.responseText;
+		var end = new Date().getTime(); 
+		alert(end-start);
+	}
+</script>
+</head>
+<body>
+	<h3>개인정보출력</h3>
+	<span id="info"></span>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+onload =()=> {
+	document.getElementById('box1').innerHTML = 'Hello '; 
+	document.querySelector('#box2').textContent ='good night'; 
+		
+	var seasons= ['春天chuntian','夏 xiatian','秋天 qiu','冬天 dong']; 
+	var message = '';
+	message += '<ol>';
+	
+	for(i=0, len=seasons.length; i<len; i++){
+		message += '<li>' +seasons[i]+'</li>'; 
+	}
+	message += '</ol>'; 
+	document.querySelector('#box3').innerHTML = message; 
+	
+	var movies = ['해리포터','센과치히로','아이언맨','어바웃타임','위대한게츠비']
+	var titles = document.getElementsByTagName('h1');
+	//var title = document.querySelectorAll('h1');
+	for(i=0, len = movies.length; i<len; i++){
+		titles[i].textContent = movies[i];
+		//titles[i].innerHTML = movies[i];
+	}
+	
+	var list = document.getElementsByClassName('green-box');
+	// var list = document.querySelectorAll('.green-box');
+	for(i=0, len = list.length; i<len; i++){
+		list[i].style['background-color'] ='green'; 
+		list[i].style.width ='50px';
+		list[i].style.height ='50px';
+	}
+}
+</script>
+</head>
+<body>
+	<div id="box1"></div><br>
+	<div id="box2"></div><br>
+	<div id="box3"></div><br>
+	
+	<h1></h1>
+	<h1></h1>
+	<h1></h1>
+	<h1></h1>
+	<h1></h1>
+	<h1></h1>
+	
+	<div class="green-box"></div><br/>
+	<div class="green-box"></div><br/>
+	<div class="green-box"></div><br/>
+	
+</body>
+</html>

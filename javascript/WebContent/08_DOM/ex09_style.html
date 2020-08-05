@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>title.style.  </title>
+<script type="text/javascript">
+	function changeStyle(){
+		var title =document.querySelector('#title'); 
+		title.style.width = '200px'; 
+		title.style.height = '50px'; 
+		title.style.backgroundColor ='SlateBlue';
+		title.style.border ='3px dotted white';
+		title.style.borderRadius = '20px 0';
+		title.style.textAlign ='center';
+		title.style.margin ='auto';
+		//title.style.verticalAlign ='middle' 
+		title.style.lineHeight = '50px';
+		
+		var content = document.querySelector('#content');
+		content.style['width'] ='200px';
+		content.style['margin']='auto';
+		content.style['font-size'] ='15px';
+		content.style['text-align']='center';
+		content.style['font-weight'] ='bold';
+	}
+	onload = changeStyle; 
+</script>
+</head>
+<body>
+	<h3 id="title">DOM</h3>
+	<div id="content">
+		Document Object Model
+	</div>
+</body>
+</html>

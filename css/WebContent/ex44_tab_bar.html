@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	.main-aside{width:400px; border:1px solid olive;}
+	input:nth-of-type(1){display: none;}
+	input:nth-of-type(1)~ div:nth-of-type(1){display: none;}
+	input:nth-of-type(1):checked ~ div:nth-of-type(1){display: block;}
+	
+	input:nth-of-type(2){display: none;}
+	input:nth-of-type(2)~ div:nth-of-type(2){display: none;}
+	input:nth-of-type(2):checked ~ div:nth-of-type(2){display: block;}
+	
+	.tab-button{display: flex;}
+	.tab-button> label {display: block; width: 200px; height:100px; line-height: 100px; 
+	background-color: DarkSeaGreen; text-align: center; color: white; border: 1px dashed white;}
+	
+	input:nth-of-type(1):checked ~ section.tab-button > label:nth-of-type(1){
+	background-color: DarkSlateGrey ; font-weight: bold; text-shadow: 2px 2px 1px gray;}
+	
+	input:nth-of-type(2):checked ~ section.tab-button > label:nth-of-type(2){
+	background-color: DarkSlateGrey ; font-weight: bold; text-shadow: 2px 2px 1px gray;}
+	
+	.tab-contents > ul {list-style-type: none; padding: 0;}
+	.tab-contents > ul >li.content{overflow: hidden; width:378px;  padding: 10px;}
+	.tab-contents > ul >li.content  div.thumbnail { float: left; padding:10px;}
+	.tab-contents > ul >li.content  div.thumbnail >div.description {float: left; margin-left: 10px;}
+	.tab-contents > ul >li.content  div.thumbnail >div.description p{text-align:center;}
+</style>
+<meta charset="UTF-8">
+<title>tap_bar click either Front-end or Back-end</title>
+</head>
+<body>
+	<div class ="main-aside">
+		<input id="a" type ="radio" name="tab" checked />
+		<input id="b" type ="radio" name="tab"/>
+		<section class="tab-button">
+			<label for="a">FRONT-END</label>
+			<label for="b">BACK-END</label>
+		</section>
+		<div class="tab-contents">
+			<ul>
+				<li class ="content">
+					<a href="#">
+						<div class ="thumbnail">
+							<img height="100"  alt="50x50 이미지" src="assets/images/interface (1).png">
+						</div>
+						<div class ="description">
+							<strong>HTML</strong><br>
+							<p>html description</p> 
+						</div>
+					</a>
+				</li>
+				<li class ="content">
+					<a href="#">
+						<div class ="thumbnail">
+							<img  height="100" alt="50x50 이미지" src="assets/images/interface.png">
+						</div>
+						<div class ="description">
+							<strong>CSS</strong><br>
+							<p>CSS description</p> 
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="tab-contents">
+			<ul>
+				<li class ="content">
+					<a href="#">
+						<div class ="thumbnail">
+							<img height="100"  alt="50x50 이미지" src="assets/images/interface (2).png">
+						</div>
+						<div class ="description">
+							<strong>JSP</strong><br>
+							<p>JSP description</p> 
+						</div>
+					</a>
+				</li>
+				<li class ="content">
+					<a href="#">
+						<div class ="thumbnail">
+							<img height="100"  alt="50x50 이미지" src="assets/images/web.png">
+						</div>
+						<div class ="description">
+							<strong>STRING</strong><br>
+							<p>STRING description</p> 
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	
+	<br><br><br>
+	
+	
+	
+</body>
+</html>

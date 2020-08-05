@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript">
+	var date1 = new Date(); 
+	document.write('<h3>new Date():' + date1 +'</h3>');
+	
+	var date2 = new Date(24*60*60*1000);
+	document.write('<h3>new Date(24*60*60*1000)'+date2 + '</h3>');
+	
+	
+	var date3= new Date(2020,4); 
+	document.write('<h3>new Date(2020,4) :' + date3 + '</h3>');
+	
+	var date4 = new Date(2020,4,6); 
+	document.write('<h3>new Date(2020,4,6) : '+ date4 +'</h3>');
+	
+	var date5 = new Date(2020,4,6,13,14,15); 
+	document.write('<h3>new Date(2020,4,6,13,14,15) : '+ date5 +'</h3>');
+	
+	var date6 = new Date('2020/05/06');
+	document.write("<h3>new Date('2020/05/06') : "+ date6 + '</h3>');
+	
+	var now = new Date(); 
+	var year = now.getFullYear(); 
+	var Month = now.getMonth() + 1; 
+	var day = now.getDate();
+	var hour = now.getHours(); 
+	var minute = now.getMinutes();
+	document.write(year +'년 ' + Month +'월 '+ day +'일 '+ hour +'시'+ minute +'분');
+	
+	
+	
+	
+	//입력 대화상자를통해서 생일을 입력하면 나이를 출력 
+		
+	nowYear = new Date().getFullYear();
+	birthYear = new Date(prompt('생일을 입력하세요 yyyy-MM-DD 또는 yyyy/mm/dd')).getFullYear(); 
+	age = nowYear-birthYear +1; 
+	alert('당신은'+ age +'살이다');
+	
+	
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

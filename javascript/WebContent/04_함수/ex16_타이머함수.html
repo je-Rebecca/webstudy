@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>타이머함수</title>
+<script type="text/javascript">
+/*
+var id =setTimeout(function(){
+	alert('Bang');
+	}, 5000); 
+
+	if(confirm('폭탄을 해제할까요?')){
+	clearTimeout(id);
+	} 
+	
+	//5,4,3,2,1 5초 타이머 
+	var count = 5;
+	function timer() {
+		setTimeout(function(){
+			if(count ==0){
+				document.write('<h1>펑</h1>');
+				return; //함수 강제종료 
+			}
+			document.write('<h1>'+ (count--) + '</h1>');
+			timer(); //자신이 자신을 부르는것 (재귀호출)
+		}, 1000);
+	}
+	
+	timer(); */
+	
+	//setInterval 
+	
+		
+
+	var count = 5;
+	var id = setInterval(function () {
+		if (count == 0) {
+			clearInterval(id);
+			document.write('<h1>펑</h1>');
+			return;
+		}
+		document.write('<h1>' + (count--) + '</h1>');
+	}, 1000);
+	
+		
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>03_XMLH onreadystatechange </title>
+<script type="text/javascript">
+
+	onload = () =>{
+		var xhr = new XMLHttpRequest(); 
+		xhr.open('GET','DATA.html',true);
+		xhr.send();
+		
+		xhr.onreadystatechange = function () {
+			alert(xhr.readyState);
+			if ( xhr.readyState == 4 ) {
+				if ( xhr.status == 200 ) {
+					alert('성공');
+					document.querySelector('#info').innerHTML = xhr.responseText;
+				}
+			}
+			
+		}
+		
+		
+		/*xhr.onreadystatechange = () => {
+			if(xhr.readyState == XMLHttpRequest.DONE && xhr.status ==200){
+				document.querySelector('#info').innerHTML = xhr.responseText;
+			}	
+		}*/
+	}	
+</script>
+</head>
+<body>
+	<h3>개인정보출력</h3>
+	<span id="info"></span>
+</body>
+</html>

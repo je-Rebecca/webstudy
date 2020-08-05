@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>submit</title>
+<script type="text/javascript">
+	function send(f){
+		//name 2~6사이,숫자 아니고 
+		var name = f.name; 
+		if(name.value.length <2 || name.value.length >6 || !isNaN(name.value) ){
+			alert('이름을 확인하세요');
+			name.focus();
+			return;
+		}//course 선택되어야 (공백 거르기)
+ 		var course = f.course;
+		if(course.value ==''){
+			alert('과목을 선택하세요');
+			course.focus();
+			return; 
+		}//score  0~100사이 숫자여야함 
+		var score = f.score;
+		if(score.value =='' || parseInt(score.value) <0 || 
+				parseInt(score.value) >100 || isNaN(score.value)){
+			alert('점수를 입력하세요');
+			score.value = ''; 
+			score.focus();
+			return;
+		}//정보를 어디로 보내나? form action 부분작성
+			f.action= "#";
+	
+			f.submit();
+}
+</script>
+</head>
+<body>
+	<form>
+		<input type="text" name ="name" placeholder="NAME" /><br> 
+		<select name ="course">
+			<option value ="">과목</option>		
+			<option value ="kor">국어</option>		
+			<option value ="eng">영어</option>		
+			<option value ="mat">수학</option>		
+		</select>
+		<input type="text" name ="score" placeholder ="SCORE"/><br>
+		<input type="button" value ="전송" onclick ="send(this.form)"/><br>
+		
+		
+	</form>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이동 관련 객체</title>
+<script type="text/javascript">
+	function withHistory(){ 
+		location.href='https://www.google.com';
+		location.assign('https://www.naver.com');
+	}
+	function withoutHistory(){	
+		location.replace('https://www.google.com');
+	}
+	
+	
+	
+	
+	
+	
+</script>
+</head>
+<body>
+	<h3>location 객체</h3>
+	<form action="#">
+		<input type="button" value ="history남기고 이동" onclick="withHistory()"/>
+		<input type="button" value ="history안 남기고 이동" onclick="withoutHistory()"/>
+	
+	</form>
+</body>
+</html>

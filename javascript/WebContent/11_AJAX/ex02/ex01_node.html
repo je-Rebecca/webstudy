@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex01_node</title>
+<script type="text/javascript">
+
+	onload=()=>{
+		document.querySelector('#nodeName').innerHTML =	document.childNodes[1].childNodes[1].nodeName; 
+		document.querySelector('#nodeValue').innerHTML = document.childNodes[1].childNodes[1].nodeValue;
+		document.querySelector('#nodeType').innerHTML = document.childNodes[1].childNodes[1].nodeType; 
+	}
+
+
+</script>
+</head>
+<body>
+	<h3>nodeName : <span id="nodeName"></span></h3>
+	<h3>nodeValue: <span id="nodeValue"></span></h3>
+	<h3>nodeType : <span id="nodeType"></span></h3>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>window객체</title>
+<script type="text/javascript">
+for(var property in window){
+	document.write('<h3>'+property +':'+ window[property]+'</h3>');
+}
+
+//창만들기  
+var popUp = open('','','width=400, height=300, top=100, left =200'); 
+if(popUp){
+	popUp.document.write('<h3>팝업창</h3>');
+}else{
+	alert('팝업 차단을 해제해 주세요');
+}
+
+try{
+	popUp.document.write('<h3>팝업창</h3>');
+} catch (e) {
+	alert('팝업 차단을 해제해 주세요');
+}
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

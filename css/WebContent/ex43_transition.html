@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	.frame{list-style-type: none; display: flex;}
+	.fruit{width: 300px; height: 300px; margin : 10px;	}
+	#fruit1{left:500px; top: 10px;}
+	#fruit2{left:810px; top: 10px;}
+	#fruit3{left:1320px; top: 10px;}
+	
+	.explain{background-color: OldLace; text-align : center;
+	 width:300px; height:300px; margin:10px; transition-timing-function:ease;
+	 transition-duration:3s; transition-property: translate;
+	 
+	}
+	#f1{position: absolute; top:300px; left: 45px;}
+	#f2{position: absolute; top:300px; left: 365px;}
+	#f3{position: absolute; top:300px; left: 685px;}
+	.fruit:hover{trasnform:trasnlate(0,-300);}
+	
+</style>
+<meta charset="UTF-8">
+<title>실습</title>
+</head>
+<body>
+
+	<ul class="frame">
+	<li>
+		<img id="fruit1" src="assets/images/blueberry.jpg" alt="blueberr" class="fruit">
+		<div id="f1" class="explain">
+			<h2>블루베리</h2>
+			<h3>상큼한 블루베리 가격: 2,000 원</h3>
+		</div>
+	</li>
+	<li>
+		<img id="fruit2" src="assets/images/plum.jpg" class="fruit">
+		<div id="f2" class="explain">
+			<h2>자두</h2>
+			<h3>새콤달콤한 자두 가격: 5,000 원</h3>
+		</div>
+	</li>
+	<li>
+		<img id="fruit3" src="assets/images/fruit.jpg" class="fruit">
+		<div id="f3" class="explain">
+			<h2>배</h2>
+			<h3>시원한 배 가격: 4,000 원</h3>
+		</div>
+	</li>
+	</ul>
+</body>
+</html>

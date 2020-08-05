@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src ="../assets/script/function.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+/*반올림 : point(123.456,2 ) =123.46 
+//올림 : pointUp(123.456,2 ) =123.46 
+//반림 : pointDown(123.456,2 ) =123.45
+
+//소수 2자리 
+//소수 1자리 
+//정수
+//일의자리 
+//십의자리 
+	function point(number, digit) {
+		return Math.round(number * Math.pow(10, digit)) / Math.pow(10, digit);
+	}
+	function pointUp(number, digit) {
+		return Math.ceil(number * Math.pow(10, digit)) / Math.pow(10, digit);
+	}
+	function pointDown(number, digit) {
+		return Math.floor(number * Math.pow(10, digit)) / Math.pow(10, digit);
+	}  */
+	
+	var number = 1234.5678;
+	for (var digit = 2; digit > -3; digit--) {
+		console.log('반올림(' + digit + '): ' + point(number, digit));
+	}
+	for (var digit = 2; digit > -3; digit--) {
+		console.log('올림(' + digit + '): ' + pointUp(number, digit));
+	}
+	for (var digit = 2; digit > -3; digit--) {
+		console.log('내림(' + digit + '): ' + pointDown(number, digit));
+	}
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

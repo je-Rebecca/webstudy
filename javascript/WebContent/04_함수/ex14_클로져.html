@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex14 closer 클로져 </title>
+<script type="text/javascript">
+/*
+function outerFunc(a){
+	function innerFunc(b){
+		return a + b;		
+	}
+	return innerFunc; 
+} 
+	var res = outerFunc(10);
+	console.log(res(20));
+	*/
+	function func() {
+		var a = 10;
+		return function(b) { a = b; console.log(a); }
+	}
+	var res =func(); 
+	res(20); 
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Jquery 배열</title>
+<script src = "asset/lib/jquery-3.5.1.js" type="text/javascript"></script>
+<script type="text/javascript">
+	//페이지로드 이벤트 
+	//$(document).ready(function(){});
+	$(document).ready(() => {
+		var array =[];   // var array = new Array(); 
+		array.push('apple');
+		array.push('peach');
+		array.push('pear');
+		
+	//Jquery배열순회  
+	//$().each(function(index,item){});
+	//$.each(array, function(index,item){}); 
+		
+	var message ='<ul>'; 
+	$.each(array, function(index, item){
+		message += '<li>' + item + '</li>';
+	});
+		message += '</ul>'
+	//태그 포함하는 문자열
+		//document.body.innerHTML =message; 
+		$('body').html(message);
+	});
+	//태그 포함하지 않는 문자열 
+		//document.body.textContent =message; 
+		$('body').text(message);
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

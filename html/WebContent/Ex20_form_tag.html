@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!--  파일 첨부가 필요한 폼 -->
+<form action="#" method="post" enctype="mutipart/form-data">
+	첨부파일 <input type="file" name="filename"/> 
+	<input type=submit value="upload"/>
+</form>
+
+<br/><hr/><br/>
+
+<!--  파일 첨부가 없는 폼 -->
+<form action="#" method="get">
+
+       <h1>&lt; input 태그의 텍스트 입력&gt;</h1>
+       <ul>
+       		<li>일반텍스트<input type=text name=query /></li>
+       		<li>비밀번호 : <input type=password name="pw" /></li>
+       		<li>숫자 : <input type="number" name="age" /></li>
+       		<li>email : <input type="email" name="email"/></li>
+       		<li>URL : <input type="url" name="url"/></li>
+       		<li>Phone # : <input type="tel" name="phone"/></li>
+       		<li>date : <input type="date" name="regdate"/></li>
+       		<li>time : <input type="time" name="kst"/></li>
+       </ul>
+       
+       <hr/>
+       <h1>&lt;input 태그의 버튼  &gt;</h1>
+       <ul>
+       <li>일반 버튼 : <input type="button" value="일반버튼"/></li>
+       <li>일반 버튼 : <button>일반버튼</button></li>
+       <li>전송 버튼 : <input type="submit" value="전송버튼"/></li>
+       <li>취소 버튼 : <input type="reset" value="입력취소"/></li>
+       <li>이미지 submit버튼: <input type="image" src="assets/image/button.jpg" width="30%"/></li>
+       </ul>
+       
+       <hr/>
+       <h2>&lt;input 태그의 선택  &gt;</h2>
+       <fieldset style ="width:200px">
+       		<legend>취미</legend>
+       		<input type="checkbox" name="hobbies" value="movie"/>电影<br>
+       		<input type="checkbox" name="hobbies" value="painting"/>그림그리기<br>
+       		<input type="checkbox" name="hobbies" value="taking pictures"/>출사<br>
+       		<input type="checkbox" name="hobbies" value="taking a walk"/>산책<br>
+       		<input type="checkbox" name="hobbies" value="book"/>看书<br>
+       </fieldset>
+       
+       
+       <fieldset style ="width:200px">
+       		<legend>지역</legend>
+       		<input type="radio" name="area" value="Seoul" checked ="checked"/>首尔<br>
+       		<input type="radio" name="area" value="New York"/>뉴욕<br>
+       		<input type="radio" name="area" value="Beijing"/>北京<br>
+       		<input type="radio" name="area" value="Tokyo"/>東京<br> 
+       </fieldset>
+       
+       <hr/>
+       <h2>&lt;select 태그&gt;</h2>
+       <select name ="mobile1">
+	       <option value="010">010</option>
+	       <option value="011">011</option>
+	       <option value="016">016</option>
+       </select> 
+       
+       <br><br><br><br>
+       <select name="role" multiple>
+       	<option value="connect">CONNECT</option>
+       	<option value="resource">RESOURCE</option>
+       	<option value="dba">DBA</option>
+       </select>
+       <br><br>
+       
+       
+       <input type="text" list="domain" name="domain" />
+       <datalist id="domain">
+	       	<option value="gmail.com"></option>
+			<option value="naver.com"></option>
+			<option value="aol.com"></option>
+	   </datalist>
+       
+       <h2>&lt;textarea :방명록 이런데에서 사용 &gt;</h2>
+              자기소개<br>
+       <textarea rows="10" cols="100" name="content"></textarea>
+     
+       
+</form>
+ 
+ <br><hr/><br>
+ 
+ <form action="#"> 
+ 	이름<input type="text" name="username" placeholder="이름" autofocus/><br>
+ 	나이<input type="text" name="userage" placeholder="나이" /><br> 
+ 	<input type="image" alt="제출" src="assets/image/button1.jpg" width="50">
+ <br><br>
+ 	<input type ="button" value="도움말을 보려면 클릭! " onclick="alert('도움말이다')"/>
+ 
+ </form>
+ <br><br>
+ <form action="#">
+ 	id 클릭하면 반응 없음<input type="text" name="userid"/>
+ 	<br><br>
+ 	<label>id 클릭하면 입력가능(label)<input type="text" name="userid"/></label>
+ 	<br><br> 
+ 	<label for="uId">id 아이디만 label 후 연결(자주쓰임)</label>
+ 	<input id="uId" type="text" name="userid"/>
+ 	
+ 	<br><br>
+ 	<input id="mala" type="checkbox" name="foods" value="마라샹궈"/>
+ 	<label for="mala">마라샹궈</label>
+ 	&nbsp;&nbsp;&nbsp;
+ 	<input id= "pizza" type="checkbox" name="foods" value="pizza"/>
+ 	<label for ="pizza">피자</label>
+ 	&nbsp;&nbsp;&nbsp;
+ 	<input id ="halal" type="checkbox" name="foods" value="halal food"/>
+ 	<label for="halal">할랄푸드</label>
+ </form>
+ <br><br><br> 
+ 
+ <form action="#">
+ <input type="hidden" name="url" value="www.google.com"/>
+ <input type="hidden" name="page" value="3"/> 
+ <input type="submit" value="hidden data submit"/>
+ </form>
+ 
+ 
+ <br><br><br> 
+ <form action="#">
+ 	<input type="text" id="a" size="2" autofocus /> + 
+ 	<input type="text" id="b" size="2" /> =
+ 	<input name ="result"> </output><br><br>
+ 	<input type="button" value="calculate" 
+ 	onclick ="result.value=parseInt(a.value)+parseInt(b.value)"/>
+ 	</form>
+ 
+ 
+ 
+ </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	*{ padding: 0; margin: 0;
+	}
+	div{border: 1px solid DarkSlateGrey; 
+		box-sizing: border-box; 
+	}
+	.test{
+	width:1000px;  margin:auto; 
+	height:1000px; border:1px solid DarkSlateGrey;}
+	
+	.test > .topmenu{
+	width:100%; height:300px; background:Salmon;}
+	
+	.test > .main{ width:100%;}
+	
+	.test> .main >.leftmenu {float:left; width:20%; height:700px;  background: SkyBlue;}
+	
+	.test> .main >.rightmenu {float:left;width:80%; height:700px; }
+
+	.test> .main >.rightmenu >.content{width:100%; height:500px; background: yellow; }
+	
+	.test> .main >.rightmenu >.footer{width:100%; height:200px; background: OliveDrab;}
+
+</style><meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div class="test">
+		<div class="topmenu">상단메뉴</div>
+	<div class="main">
+		<div class="leftmenu" >왼쪽메뉴</div>
+		<div class="rightmenu" >
+			<div class="content" >컨텐츠</div>
+			<div class="footer" >바닥글</div>
+		</div>
+	</div>
+	</div>	
+</body>
+</html>

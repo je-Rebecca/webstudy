@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>prototype</title>
+<script type="text/javascript">
+
+function Student(name){
+	this.name = name; 
+}
+
+Student.prototype.school = '서강대'; 
+var s1 = new Student('Tom'); 
+var s2= new Student('Brown'); 
+
+for(var property in s1){
+	document.write(property + ':' + s1[property]+'<br>')
+}
+
+for(var property in s1){
+	document.write(property + ':' + s2[property]+'<br>')
+}
+</script>
+</head>
+<body>
+
+</body>
+</html>

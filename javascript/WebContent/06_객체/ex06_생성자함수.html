@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>생성자 함수</title>
+<script type="text/javascript">
+
+function Person(name){
+	this.name = name; 
+	this.birthday = new Date();
+	this.age = new Date().getFullYear()-this.birthday.getFullYear()+1 ;
+}
+
+var p1 = new Person('Ellen'); 
+var p2 = new Person('Kate');
+
+document.write('<h3>이름:'+ p1.name +'</h3>');
+document.write('<h3>나이'+ p1.age +'살 </h3>');
+document.write('<h3>생일'+ p1.birthday +'</h3>');
+
+document.write('<h3>이름:'+ p2.name +'</h3>');
+document.write('<h3>나이'+ p2.age +'살 </h3>');
+document.write('<h3>생일'+ p2.birthday +'</h3>');
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

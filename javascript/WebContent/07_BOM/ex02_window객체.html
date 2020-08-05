@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	var popUp; 
+		
+	function myOpen(){
+		popUp = open('','','width=400, height =300');
+	}
+	function myClose(){
+		if(popUp){
+		popUp.close(); 
+		}
+	}
+	
+	function myFocus(){
+		if(popUp){
+			popUp.focus();
+		}
+	}
+	
+	function myCheck(){
+		if(!popUp){
+			alert('새창이 열린적이 없습니다');
+		}else{
+			if(popUp.closed){
+				alert('창이 닫혔다'); 
+			}else{
+				alert('창이 열렸다');
+				popUp.focus();
+			}
+		}
+	}
+</script>
+</head>
+<body>
+	<h3> 새 창 열고 닫기</h3>
+	<form action ="#">
+		<input type= "button" value ="창 열기" onclick="myOpen()"/>
+		<input type= "button" value ="창 닫기" onclick="myClose()"/>
+		<input type= "button" value ="창 선택" onclick="myFocus()"/>
+		<input type= "button" value ="창이 열려있는가?" onclick="myCheck()"/>
+	</form>
+</body>
+</html>

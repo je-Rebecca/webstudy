@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>로그인</title>
+<style type="text/css">
+	div {
+		padding : 0; margin: 0px; box-sizing:border-box;
+	}
+	.wrap{
+		width: 500px; 	display: flex;
+	}
+	.wrap > .left-wrap{	width:350px;}
+	.wrap> .right-wrap{	width:150px;}
+	.right-wrap > .login-button{
+		width: 140px; 			height: 140px;
+		margin: auto;			line-height: 140px;
+		text-align: center; 	background : lightgray;
+		border-radius: 10px; 		font-size:20px;
+		font-weight:bold;	
+	}
+	.left-wrap > .id-wrap, .left-wrap >.pw-wrap{display: flex;	padding:5px;}
+	
+	.icon-box{
+	width:60px;
+	height: 60px; 
+	background: lightgray;
+	border: 1px solid lightgray;
+	text-align: center;
+	border-radius : 10px 0 0 0 ;
+	padding-top:15px;
+	}
+	
+	.id-wrap > input , .pw-wrap > input{
+	width: 250px;		height: 40px; padding: 10px;
+	border: 1px solid lightgray;	border-radius : 0 0 10px 0 ;
+	}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+<body>
+	<div class = 'wrap'>
+	
+		<div class ="left-wrap">
+			<div class="id-wrap">
+				<div class="icon-box">
+					<i class="fas fa-user fa-2x"></i>
+				</div>
+				<input type ="text" placeholder="username"/>
+			</div>
+			<div class="pw-wrap">
+				<div class="icon-box">
+					<i class="fas fa-key fa-2x"></i>
+				</div>
+				<input type ="password" placeholder="●●●●"/>
+			</div>
+		</div>
+		<div class ="right-wrap">
+			<div class ='login-button'>
+			 로그인 
+			</div>
+		</div>
+	
+	</div>
+</body>
+</html>

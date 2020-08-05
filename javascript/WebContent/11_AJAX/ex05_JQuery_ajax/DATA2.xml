@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<languages>
+<lang>
+<name>HTML</name>
+<category>WEB</category>
+<version>5.1</version>
+<priority>high</priority>
+</lang>
+<lang>
+<name>CSSL</name>
+<category>WEB</category>
+<version>3.0</version>
+<priority>middle</priority>
+</lang>
+</languages>

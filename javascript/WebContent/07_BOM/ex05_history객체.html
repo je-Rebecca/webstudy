@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function goBack(){
+		history.back();
+	}
+	function goFoward(){
+		history.foward();
+	}
+	function goBack1(){
+		history.go(-1);
+	}
+	function goback2(){
+		history.go(-2);
+	}
+</script>
+</head>
+<body>
+	<h3>history 객체</h3>
+	<form action="#">
+		<input type="button" value ="뒤로 가기" onclick="goBack()" /> 
+		<input type="button" value ="앞으로 가기" onclick="goFoward()" /> 
+		<input type="button" value ="한페이지 뒤로" onclick="goBack1()" /> 
+		<input type="button" value ="뒤 페이지 뒤로" onclick="goBack2()" />		
+	</form>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체</title>
+<script src= "asset/lib/jquery-3.5.1.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	var person ={
+		name: 'Emma',
+		age:24,
+		address : 'Seoul'
+	};
+	$.each(person, function(property, value){
+		console.log(property + ','+ value)
+	})
+	
+});
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>10프로토타입</title>
+<script type="text/javascript">
+function Student(name,kor,eng,mat){
+	this.name = name;
+	this.kor =kor;
+	this.eng = eng;
+	this.mat = mat; 
+	
+	this.__proto__.getAverage = function () {
+		return (this.kor + this.eng + this.mat) / 3;
+	};
+	
+	this.__proto__.getGrade = function () {
+		if ( this.getAverage() >= 90 ) {
+			return 'A';
+		} else if ( this.getAverage() >= 80 ) {
+			return 'B';
+		} else if ( this.getAverage() >= 70 ) {
+			return 'C';
+		} else if ( this.getAverage() >= 60 ) {
+			return 'D';
+		} else {
+			return 'F';
+		}
+	}
+	
+}
+	
+  //students 배열에 student 객체 3개 저장
+	students =[];
+	students.push(new Student('Ellen',80,70,90)); 
+	students.push(new Student('Tomas',90,60,80)); 
+	students.push(new Student('Ed',95,76,80));
+	
+	for(i=0, len= students.length; i<len; i++){
+		document.write('이름:' +students[i].name+'<br>');
+		document.write('국영수:' +students[i].kor+','+ students[i].eng+','+
+				+students[i].mat +'<br>');
+		document.write('평균:'+students[i].getAverage()+'학점;' +
+		students[i].getGrade()+'학점<br>');
+	}
+	
+	for ( i = 0, len = students.length; i < len; i++ ) {
+		// with 문을 활용해서 객체명을 한 번만 작성할 수 있다.
+		with(students[i]) {
+			document.write('이름: ' + name + '<br/>');
+			document.write('국영수: ' + kor + ', ' + eng + ', ' + mat+ '<br/>');
+			document.write('평균: ' + getAverage() + ', 학점; ' + getGrade() + '학점<br/>');
+		}
+	}
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

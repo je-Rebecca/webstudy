@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<form action ="#"> 
+	<h1 id ="counter"></h1>
+	<input type= "button" value ="증가버튼" onclick ="show_increment()" />
+</form>
+	<script type="text/javascript">
+	//호출할대마다 1씩 증가되는 순번을 리턴하는 increment()함수 구현
+	/*//정의  - > 실패
+	function increment(){
+		var no =0; 
+		no++;;
+		return no;
+	}
+	
+	//호출 
+	console.log('1st: ' + increment());
+	console.log('2nd: ' + increment());
+	console.log('3rd: ' + increment());
+	*/
+
+	//성공 (클로저이용- 익명함수의 리턴)
+	var increment = function (){
+		var no = 0;
+		return () => { no++; return no; };
+	}();
+	
+	/*/호출 
+	console.log('1st: ' + increment());
+	console.log('2nd: ' + increment());
+	console.log('3rd: ' + increment());
+	*/
+	
+	function show_increment() {
+		document.getElementById('counter').innerHTML = increment();
+	}
+	
+	
+	</script>
+ 
+</body>
+</html>

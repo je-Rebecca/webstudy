@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex02 이벤트방식 </title>
+<script type="text/javascript">
+
+//이벤트연결 
+onload =() =>{}
+
+//선언적함수연결 
+function init(){
+	document.body.style.backgroundColor ='skyblue';
+	
+}
+	window.onload =init; //함수이름만 이벤트에 연결(괄호없음)
+
+
+</script>
+
+
+</head>
+<body>
+	 
+	<h3 onclick ="location.href='http://www.google.com'">  google it </h3>
+	 
+	<input id ="btn" type="button" value ="미션확인" />
+	<script type="text/javascript">
+		var btn =document.querySelector('#btn'); 
+		btn.onclick =()=>{
+			alert('Impossible');
+			btn.value='stop'; 
+			btn.onclick = null;
+		}
+	</script>
+</body>
+</html>

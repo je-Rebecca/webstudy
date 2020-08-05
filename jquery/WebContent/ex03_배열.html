@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>03배열 + 표</title>
+<script src = "asset/lib/jquery-3.5.1.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(document).ready(()=>{
+		
+		var array = []; 
+		var person1 = {name : "William", age: 5};
+		var person2 = {name : "Ben", age: 3};
+		array.push(person1);
+		array.push(person2);
+		
+		var message = ''; 
+		//$.each(array, (index,item)=>{}); //매개변수 있는 익명함수 
+		$.each(array, function(index,item){
+		message += '<tr>'; 
+		message += '<td>'+ (index + 1)+'</td>';
+		message += '<td>'+ item.name+'</td>';
+		message += '<td>'+ item.age+'</td>';
+		message += '</tr>'; 
+		});
+		$('#content').html(message)
+	});
+
+</script>
+</head>
+<body>
+	<table border ="1">
+		<thead>
+			<tr>
+				<td>No.</td><td>성명</td><td>나이</td>
+			</tr>
+		</thead>
+		<tbody id="content">
+		</tbody>
+	</table>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	form input[type]{
+		font-size: 20px;
+		border:1px solid black; 
+	}
+	form input[readonly]{
+		background-color:lightgray;
+	}	
+	form input[type=text]{
+		background-color: bisque;
+	}
+	form input[type=password]{
+		border-radius: 10px;
+	}
+	form input:not([type=number]){
+		width: 500px;}
+		
+	img[src$=jpg]{
+		width: 200px
+	}	
+	img[src$=png]{
+		width:300px
+	}
+	
+</style>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="#">
+	일반텍스트 <input type="text"/><br>
+	비밀번호<input type="password"/><br> 
+	이메일<input type="email" value="admin@naver.com" readonly/><br>
+	숫자<input type="number"/><br> 
+	
+	</form><br><br>
+	<h3>jpg image</h3>
+	<img alt="img" src="assets/images/redhome.jpg"><br>
+	
+	<h3>png image</h3>
+	<img alt="img" src="assets/images/houses-1094900_640.png"><br>
+	
+</body>
+</html>

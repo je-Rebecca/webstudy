@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>07생성자함수</title>
+<script type="text/javascript">
+
+function Book(title,writer, price){
+	if( !(this instanceof Book)){
+		return new Book(title,writer,price); 
+	}
+	this.title = title;
+	this.writer = writer;
+	this.price = price; 
+}
+
+var myBook = new Book('자바의 정석', '김자바', 30000);
+var yourBook = Book('멘토', '코리아', 30000);
+
+document.write('<h3>제목' +myBook.title +'</h3>');
+document.write('<h3>저자' +myBook.writer +'</h3>');
+document.write('<h3>가격' +myBook.price +'</h3>');
+document.write('<h3>제목' +yourBook.title +'</h3>');
+document.write('<h3>저자' +yourBook.writer +'</h3>');
+document.write('<h3>가격' +yourBook.price +'</h3>');
+</script>
+</head>
+<body>
+
+</body>
+</html>

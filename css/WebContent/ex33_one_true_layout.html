@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	
+	.wrap1{ background: Linen; margin-bottom: 20px }
+	
+	.wrap1 > .box1 {width: 200px; height: 200px; border: 1px solid black; float:left; }
+	
+	.wrap1 > .clear {clear: left; }
+	
+	.wrap2{background: Lavender; margin-bottom: 20px; overflow: hidden; }
+	
+	.wrap2 >.box2{width: 200px; height: 200px;	border: 1px solid black; float:left; }
+	
+	.wrap3{background: Khaki; margin-bottom: 20px; display: flex; flex-flow: row nowrap; 
+	flex-wrap :wrap-reverse;	justify-content : flex-start ;  }
+	
+	.wrap3 > .box3{width: 200px; height: 200px;	border: 1px solid black; float:left;}
+	
+</style>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div class="wrap1">
+		<div class="box1">A</div>
+		<div class="box1">B</div>
+		<div class="box1">C</div>
+		<div class="clear"></div>
+	</div>
+	<div class="wrap2">
+		<div class="box2">D</div>
+		<div class="box2">E</div>
+		<div class="box2">F</div>
+	</div>
+	<div class="wrap3">
+		<div class="box3">G</div>
+		<div class="box3">H</div>
+		<div class="box3">I</div>
+		<div class="box3">G</div>
+		<div class="box3">H</div>
+		<div class="box3">I</div>
+		<div class="box3">G</div>
+		<div class="box3">H</div>
+		<div class="box3">I</div>
+		
+	</div>
+	<div>바닥글</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Bruckets Practice</title>
+   <script>
+    function goSearch(){
+       var query = document.forms.myform.query;
+        if(query.value ==''){
+          alert('please type the words');
+          query.focus();
+          return false;
+        }
+       return true; 
+    }
+   </script>
+  </head>
+  <body>
+    <form name ="myform" action ="#" onsubmit="return goSearch()">
+      <label for="search">검색</label>
+      <input id="search" type ="text" name ="query" />
+      <input type="submit" value="검색"/>
+      
+    </form>
+  </body>
+</html>

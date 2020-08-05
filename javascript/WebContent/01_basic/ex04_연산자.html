@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+console.log('제곱:' +(2**3));
+console.log('나누기'+ (7/2)); 
+console.log('나머지'+(7%2)); 
+console.log('목(parseInt)'+parseInt(7/2));
+console.log('목(Math.floor)'+Math.floor(7/2));
+
+//문자열 연산자 
+console.log(1+'살');  //1살 
+console.log(1+2+'살'); //3살 
+
+console.log(10+'2');//102
+console.log(10-'2');//8
+console.log(10*'2');//20
+console.log(10**'2');//100
+console.log(10/'2');//5
+console.log(10%'2');//0
+
+//관계연산자
+var a =101;
+console.log(100 >=a && a >= 0);
+console.log(100 >=a >= 0);
+
+
+var b=0;
+var c= false;
+console.log('0==false :' + (b==c));
+console.log('0===false :' +(0===c));
+
+//논리 연산자 
+
+var d =10; 
+var e =11; 
+
+console.log(d > 10 && e > 10 && ++d > 10 && ++e >10);
+console.log('d :' + d);
+console.log('e :' +e);
+
+//조건 연산자  : 최저시금 8590, 하루 8시간 근무 최저시급 초과근무는 1.5배  10시간 근무할때 일당? 
+
+
+var workTime = 10;
+var pph = 8590;  // pay per hour
+
+var pay = workTime * pph;
+pay = (workTime <= 8) ? pay + 0 : pay + (workTime - 8) * pph * 0.5;
+console.log('하루 : ' + pay);
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

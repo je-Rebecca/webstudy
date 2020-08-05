@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+	.transition-box{width :0; background: tan; 
+	transition-property: width;	
+	transition-delay: 1s; transition-duration: 5s; transition-timing-function: ease-out;}
+	
+	.transition-box:hover{width:500px;}
+	
+	.rotate-box{width: 100px; height: 100px; background-color: tomato;
+	transition-property: transform; transition-duration:3s;
+	transition-timing-function: ease-in; }
+	
+	.rotate-box:hover{transform:rotate(180deg); }
+	
+</style>
+<title>transition</title>
+</head>
+<body>
+	<h3>마우스 대면 1 초 후에 5초 동안 너비가 500px로 커지는 박스 </h3>
+	<div class ="transition-box">box</div><br><br> 
+	
+	<h3>마우스를 대면 180도 회전하는 박스 </h3>
+	<div class="rotate-box">180도</div>
+	
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex04 익명함수</title>
+<script type="text/javascript">
+//일반 익명함수 정의
+var view1 =function(){
+	console.log('view1 호출'); 
+} 
+//호출 
+view1();
+
+//화살표함수 정의
+var view2 = () => { 
+	console.log('view2 호출'); 
+}//호출 
+view2();
+
+
+//익명함수 실행 순서가 다를 경우 
+
+view3(); 
+var view3 = function(){
+	console.log('view3 호출');
+}
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

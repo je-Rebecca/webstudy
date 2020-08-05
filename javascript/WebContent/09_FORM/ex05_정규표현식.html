@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>정규표현식</title>
+<script type="text/javascript">
+
+var regExp = /^\d+$/g; 
+var regExp = /^[0-9]+$/g; 
+
+/*
+// 1. match()
+// 정규식 패턴과 일치하는 문자열을 배열로 반환한다.
+// 없으면 null 을 반환한다.
+
+var str1 = '123456789';
+//2. exec()
+if ( regExp.exec(str1) ) {
+	console.log('숫자o');
+} else {
+	console.log('숫자x');
+}
+
+//3.search 
+if(str1.search(regExp) != -1){
+	console.log('숫자o');
+} else {
+	console.log('숫자x');
+	
+}
+
+ 
+
+
+if(regExp.test(str1)){
+	console.log('숫자o');
+} else {
+	console.log('숫자x');
+	
+}*/
+
+//4.test()
+var str1 = '219';
+if ( regExp.test(str1) ) {
+	console.log('숫자이다.');
+} else {
+	console.log('숫자가 아니다.');
+}
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+		#box1{
+		width: 200px;
+		padding: 10px;
+		border:10px solid black;
+		margin:10px; 
+		box-sizing:content-box;
+		}
+		#box2{
+		width:200px;
+		padding:10px;
+		border:10px solid black;
+		margin:10px;
+		box-sizing:border-box;
+		}
+		
+	.shadow-box-style{
+		width:200px; 
+		height:100px;
+		border:1px solid black; 
+		background-color: rgb(118, 200, 185); }
+		
+	#box3{
+	box-shadow: 10px 5px 5px yellow; }
+	
+	#box4{
+	box-shadow: 0px 0px 5px 10px rgb(180, 180, 180);}	
+</style>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="box1" class="box-style">
+	box-1
+	</div>
+	<div id="box2" class="box-style">
+	box-2</div><br>
+	<div id="box3" class="shadow-box-style">
+	box-3</div><br>
+	<div id="box4" class="shadow-box-style">
+	box-4</div>
+</body>
+</html>

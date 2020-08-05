@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+/*
+onload =() =>{
+	var colors =['red','orange','gold','green','blue','navy','purple']; 
+	var contents =['빨','주','노','초','파','남','보'];
+	
+	var box = document.querySelector('#box');
+	var content= document.querySelector('#content');
+	
+	box.style.width ='100px';
+	box.style.height ='100px';
+	box.style.textAlign ='center';
+	box.style.color ="white";
+	box.style.fontSize ='5em'; 
+	box.style.lineHeight ='100px';
+	
+	i=0; 
+	setInterval(()=>{
+		box.style.backgroundColor = colors[i]
+		content.textContent = contents[i];
+		//content.innerHTML = contents[i];
+		i++; 
+		i %= 7; // if(i==7){i= 0};
+		}, 1000 );
+	}*/
+	
+	
+	onload =() =>{
+		var colors =['red','orange','gold','green','blue','navy','purple']; 
+		var contents =['빨','주','노','초','파','남','보'];
+		
+		var box = document.querySelector('#box');
+		var content= document.querySelector('#content');
+		
+		box.style.width ='100px';
+		box.style.height ='100px';
+		box.style.textAlign ='center';
+		box.style.color ="white";
+		box.style.fontSize ='5em'; 
+		box.style.lineHeight ='100px';
+		
+		i=0;
+		function rainbow(){	
+		setTimeout(()=>{
+			box.style.backgroundColor = colors[i]
+			content.textContent = contents[i];
+			i++; 
+			i %= 7; // if(i==7){i= 0};
+			rainbow();
+			},1000);
+	
+		}
+		
+		
+		/*function rainbow(){
+		//작업 
+		setTimeout(rainbow ,1000);  
+		}*/
+	
+		
+	}
+	
+	
+	
+	
+	
+</script>
+
+</head>
+<body>
+	<div id="box">
+		<p id="content">빨</p>
+	</div>
+</body>
+</html>

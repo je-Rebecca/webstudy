@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE people>
+<people>
+<person name ="Alice" age ="20" address ="Seoul" phone ="010-1234-5678">
+</person>
+</people>

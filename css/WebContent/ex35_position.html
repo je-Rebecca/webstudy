@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+
+	.wrap{ position: relative; width: 600px; height: 600px; border: 1px solid black;	}
+	.wrap > .box{
+		width: 100px; height: 100px;  border: 1px dashed olive; }
+	.wrap > #red-box{position: static;  top: 50px; left: 50px; bottom: 50px; right: 50px;}
+	
+	.wrap > #red-box{position: relative;top: 50px; left: 50px; background: crimson;}
+	
+	.wrap > #red-box{position:absolute; top: 10px; left: 10px; background: crimson;}
+	
+	.wrap> #blue-box{position: absolute; top:10px; right: 10px; background: MediumBlue;}
+	
+	.wrap> #green-box{position: absolute; bottom:10px; left:10px; background: DarkCyan;}
+	
+	.wrap> #yellow-box{position: absolute; bottom:10px; right: 10px; background: Gold;}
+</style>
+<title>Insert title here</title>
+</head>
+<body>
+	<div class ="wrap">
+		<div class ="box" id="red-box"></div>
+		<div class ="box" id="blue-box"></div>
+		<div class ="box" id="green-box"></div>
+		<div class ="box" id="yellow-box"></div>
+</div>
+</body>
+</html>

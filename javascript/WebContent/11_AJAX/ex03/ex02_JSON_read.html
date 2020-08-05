@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Json 2개의 객체 호출</title>
+<script type="text/javascript">
+onload = () => {
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', 'DATA2.json', true);
+	xhr.send();
+	xhr.onreadystatechange = () => {
+		if ( xhr.readyState == 4 ) {
+			if ( xhr.status == 200 ){
+				var dataList = JSON.parse( xhr.responseText );
+				var message = '';
+				for ( i = 0, len = dataList.length; i < len; i++ ){
+					message += '<tr>';
+					for(var p in dataList[i]){
+						message += '<td>'+ dataList[i][p] +'</td>';	
+					}
+					message += '</tr>';
+			}
+					document.querySelector('#content').innerHTML += message;
+			}
+     	}
+	  }
+	}
+</script>
+</head>
+<body>
+	<table border ="1">
+	<thead><tr><th>성명</th><th>나이</th><th>주소</th><th>연락처</th></tr></thead>
+		<tbody id="content"></tbody>
+	</table>
+</body>
+</html>

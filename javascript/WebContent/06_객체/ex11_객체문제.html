@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체문제</title>
+<script type="text/javascript">
+/*
+//문제1. 책이름, 책저자, 책가격 정보를 입력 받아
+//생성자 함수 없이book 객체를 생성하시오.
+		
+var book ={};
+		
+	book.name = prompt('책이름 입력하세요');
+	book.author = prompt('책 저자 입력');
+	book.price = Number(prompt('책 가격 입력'));
+		
+	document.write('<h3> 책명' + book.name +'</h3>');
+	document.write('<h3> 저자' + book.author +'</h3>');
+	document.write('<h3> 가격' + book.price +'</h3>');
+
+//문제2. 자동차모델, 가격을 입력 받아
+// 생성자함수 car 객체를 생성하시오.
+
+function Car(model,price){
+
+	this.model = model;
+	this.price = price;
+	}
+
+var c1 = new Car(prompt('지동차 모델 입력'), Number(prompt('자동차 가격입력')));
+document.write('<h3>모델'+ c1.model +'</h3>');
+document.write('<h3>가격'+ c1.price +'</h3>');
+*/
+//자동차 객체를 생성하시오 (속도 0~100, 연료 0~50)
+//speedUp함수 속도+10, 연료 -5 speedDown 속도 -10 
+//속도와 연료량 출력하는 panel 함수 
+function Car(model,oil){
+	
+	this.model = model; 
+	this.speed =0; 
+	this.oil= oil; 
+	
+	this.__proto__.Max_Speed =100; 
+	this.__proto__.Max_Oil =50; 
+	this.__proto__.Step_Speed =10; 
+	this.__proto__.Step_oil =5;
+	
+	this.__proto__.speedUp = function(){
+	if(this.speed >= this.__proto__.Max_Speed || this.oil <this.__proto__.Step_oil){
+			return;
+	}
+		this.speed += this.__proto__.Step_Speed;
+		if(this.speed > this.__proto__.Max_Speed){
+		   this.speed = this.__proto__.Max_Speed;
+		}
+		this.oil -= this.__proto__.Step_oil;
+	}
+	
+	this.__proto__.speedDown = function(){
+		if(this.speed <=0){
+			return; 
+		}
+		this.speed -= this.__proto__.Step_Speed;
+		if(this.speed <0){
+			this.speed =0; 
+		}
+	}
+	this.__proto__.panel = function(){
+		return 'Model: ' + this.model + ', Speed :'
+		+ this.speed +'KM(OIL: ' +this.oil +'L)<br>';
+	}
+} 
+
+var myCar = new Car('e-class', 50);
+
+document.write(myCar.panel());
+myCar.speedUp();
+myCar.speedUp();
+myCar.speedUp();
+document.write(myCar.panel());
+myCar.speedDown();
+myCar.speedDown();
+myCar.speedDown();
+document.write(myCar.panel());
+
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

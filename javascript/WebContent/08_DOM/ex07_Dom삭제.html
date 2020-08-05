@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+onload =()=>{
+	var h1 = document.getElementsByTagName('h1')
+	//console.log(h1);
+	console.log(h1[0]);
+	
+	document.body.removeChild(h1[0]); 
+	//var box = document.querySelector('#outer-box');
+	/*
+	var p1= document.getElementsByTagName('p2');
+	var p1= document.querySelector('p2');
+	box.removeChild(p2);*/
+	
+	
+	var box = document.getElementById('outer-box');
+	
+	var paragraphs = document.getElementsByTagName('p');
+	
+	box.removeChild(paragraphs[1]);
+	
+}
+
+</script>
+</head>
+<body>
+	<h1>안녕하세요 </h1>
+	<div id ="outer-box">
+		<p id="p1">첫 번째 문단</p>
+		<p id="p2">두 번째 문단</p>
+		<p id="p3">세 번째 문단</p>
+	</div>
+</body>
+</html>

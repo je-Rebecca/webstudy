@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSV로 읽어내기</title>
+<script type="text/javascript">
+onload = () => {
+	
+	var xhr = new XMLHttpRequest();
+	xhr.open('GET', 'DATA.csv', true);
+	xhr.send();
+	xhr.onreadystatechange = () => {
+		if ( xhr.readyState == 4 ) {
+			if ( xhr.status == 200 ) {
+				var data = xhr.responseText;
+				var dataProperties = data.split(',');
+				var message = '';
+				message += '<ul>';
+				for ( i = 0, len = dataProperties.length; i < len; i++ ) {
+					message += '<li>' + dataProperties[i] + '</li>';
+				}
+				message += '</ul>';
+				document.body.innerHTML = message;
+			}
+		}
+	}
+	
+}
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

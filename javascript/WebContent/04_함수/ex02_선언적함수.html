@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//함수 정의와 동시에 변수 저장 
+
+var view1 = function myFunc(){
+	alert('myFunc()실행'); 
+}
+
+/*view1(); //변수로 대신 함수 호출 가능. 
+
+// 함수 정의와 변수 저장 분리
+function yourFunc(){
+	alert('yourFunc()실행');
+}
+
+var view2 = yourFunc;//함수 이름만 사용하고 () 없음을 주의! 
+
+view2();*/ 
+
+//2. '함수 정의'와 변수 저장 분리
+
+// 1) 함수 정의
+function yourFunc() {
+	alert('yourFunc() 실행');
+}
+
+// 2) 변수에 함수 저장
+var view2 = yourFunc;  // 함수 이름만 사용하고 괄호()가 없음에 주의한다.
+
+// 3) 함수 호출
+view2();
+
+
+alert(view2);
+
+</script>
+</head>
+<body>
+	
+</body>
+</html>

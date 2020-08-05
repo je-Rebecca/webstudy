@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3 id ="title">before click</h3>
+<script type="text/javascript">
+	
+	var title = document.querySelector('#title');
+	
+	function changeTitle (){
+		//title.innerHTML = 'after Click';
+		this.innerHTML = 'after Click';
+		this.style.color ='tomato';
+	}
+
+	title.onclick=changeTitle;  //이벤트연결
+	
+</script>
+</body>
+</html>

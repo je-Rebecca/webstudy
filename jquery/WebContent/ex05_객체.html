@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>객체</title>
+<script src= "asset/lib/jquery-3.5.1.js" type="text/javascript"></script>
+<script type="text/javascript">
+	//페이지 로드 이벤트 : 다큐먼트 로드가 끝나면이 함수를 진행하라 
+	$(document).ready(function(){
+		//객체
+		var book ={}; 
+		
+		//프로퍼티의 동적 추가 
+		book.title ='제이쿼리'; 
+		book.publisher ='나무출판사';
+		
+		//extend를 이용한 프로퍼티 추가 
+		$.extend(
+			book,{writer: "Tom",
+				price : 10000} 
+	);
+		$('body').append('제목' + book.title +'<br>');
+		$('body').append('저자' + book.publisher +'<br>');
+		$('body').append('출판' + book.writer +'<br>');
+		$('body').append('가격' + book.price +'<br>');
+	});
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex05_마우스이벤트</title>
+<style type="text/css">
+	body {display: flex;}
+	body > div {
+		width: 300px;
+		height: 300px;
+		margin-right: 50px;
+		border: 1px solid black;
+	}
+</style>
+<script type="text/javascript">
+	function func1(){
+		document.querySelector('#box1').innerHTML ='안녕하세요';
+		document.querySelector('#box1').style.backgroundColor ='pink';
+		
+	}
+	function func2(){
+		document.querySelector('#box2').innerHTML ='你好吗 ';
+		document.querySelector('#box2').style.backgroundColor ='tomato';
+	}
+	function func3(obj){
+		obj.innerHTML = 'Hello Mouse';
+		obj.style.backgroundColor ='gold';
+	}
+	function func4(obj){
+		obj.innerHTML = 'Bye Mouse';
+		obj.style.backgroundColor ='green';
+	}
+</script>
+</head>
+<body>
+	<div id="box1" onclick ="func1()"></div>
+	<div id="box2" ondblclick ="func2()"></div>
+	<div id="box3" onmouseover ="func3(this)"></div> 
+	<div id="box4" onmouseout="func4(this)"></div>
+</body>
+</html>

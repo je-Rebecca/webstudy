@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//새일을 전달하면 나이를 리턴하는 getAge()함수 
+	function getAge(birthday){
+		return new Date().getFullYear() - new Date(birthday).getFullYear()+1;
+	}
+	age =getAge('2000-01-01'); 
+	console.log('나이 :' +age +'살');
+	
+	//함수를 리턴하는 경우(주로 익명함수 리턴함)
+	
+	function func1(){
+		return function () { console.log('func1()호출');};
+	}
+	
+	func1()(); 
+	
+	function func2(){
+		return ()=> {console.log('func1()호출');};
+	}
+	
+	func2()(); 
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

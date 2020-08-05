@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ex11 내부함수</title>
+<script type="text/javascript">
+//원의 넓이  pi * r **2; 
+
+
+function getArea(radius){
+	
+	function getSquare(radius){
+		return radius ** 2; 
+	}
+	return 3.14 * getSquare(radius);
+}
+
+// 외부함수 getAra호출 
+var area= getArea(1.5); 
+console.log('1.5 인 원의 넓이' + area);
+</script>
+</head>
+<body>
+
+</body>
+</html>
